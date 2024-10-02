@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    int number;
+
+    // รับค่าจากผู้ใช้
+    printf("Input :\n");
+    scanf("%d", &number);
+
+    // วิเคราะห์จำนวน
+    if (number > 0) {
+        printf("Positive\n");
+    } else if (number < 0) {
+        printf("Negative\n");
+    } else {
+        printf("Zero\n"); // ในกรณีที่ค่าเป็นศูนย์
+    }
+
+    return 0;
+}
