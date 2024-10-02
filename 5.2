@@ -1,0 +1,46 @@
+#include <stdio.h>
+
+int main() {
+    int score;
+    printf("Enter score :\n");
+    scanf("%d", &score);
+
+    // ใช้การหารเพื่อจัดกลุ่มคะแนน
+    int gradeGroup = score / 5; // แบ่งคะแนนเป็นกลุ่ม
+
+    switch (gradeGroup) {
+        case 0: // 0 - 49
+            if (score < 50) {
+                printf("F !\n");
+            }
+            break;
+        case 10: // 50 - 54
+            printf("D !\n");
+            break;
+        case 11: // 55 - 59
+            printf("D+ !\n");
+            break;
+        case 12: // 60 - 64
+            printf("C !\n");
+            break;
+        case 13: // 65 - 69
+            printf("C+ !\n");
+            break;
+        case 14: // 70 - 74
+            printf("B !\n");
+            break;
+        case 15: // 75 - 79
+            printf("B+ !\n");
+            break;
+        case 16: // 80 ขึ้นไป
+            if (score >= 80) {
+                printf("A !\n");
+            }
+            break;
+        default:
+            printf("Invalid score !\n");
+            break;
+    }
+
+    return 0;
+}
