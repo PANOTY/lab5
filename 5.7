@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int year;
+
+    // รับค่าจากผู้ใช้
+    printf("Year(s) :\n");
+    scanf("%d", &year);
+
+    // ตรวจสอบปีอธิกสุรทิน
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                printf("February has 29 days\n"); // ปีอธิกสุรทิน
+            } else {
+                printf("February has 28 days\n"); // ไม่เป็นปีอธิกสุรทิน
+            }
+        } else {
+            printf("February has 29 days\n"); // ปีอธิกสุรทิน
+        }
+    } else {
+        printf("February has 28 days\n"); // ไม่เป็นปีอธิกสุรทิน
+    }
+
+    return 0;
+}
