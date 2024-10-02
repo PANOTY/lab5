@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    char characters[4]; // อาร์เรย์สำหรับเก็บตัวอักขระ 4 ตัว
+
+    // รับค่าตัวอักขระจากผู้ใช้
+    printf("Enter 4 characters (separated by space): ");
+    for (int i = 0; i < 4; i++) {
+        scanf(" %c", &characters[i]); // รับค่าตัวอักขระ
+    }
+
+    // แสดงผลตัวอักขระย้อนกลับ
+    printf("Result: ");
+    for (int i = 3; i >= 0; i--) {
+        printf("%c ", characters[i]); // แสดงผลจากตัวอักขระตัวสุดท้ายไปยังตัวแรก
+    }
+    printf("\n");
+
+    return 0;
+}
